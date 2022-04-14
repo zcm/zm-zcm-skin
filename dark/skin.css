@@ -23,7 +23,9 @@
 
 body {
     color: #dddddd;
-    background-color: #222222;
+    background-color: black;
+    font-family: monospace;
+    line-height: 1;
 }
 
 h1 {
@@ -144,12 +146,76 @@ fieldset {
 }
 
 #header {
-    border-bottom: 1px solid #000000;
+    /* border-bottom: 1px solid #000000; */
+    background-color: unset;
+    display: flex;
 }
+
+#header > .flex-row {
+  padding: unset !important;
+}
+
+#header > .flex-row button, #header > .flex-row span {
+  margin: 0 .25em;
+  align-self: center;
+}
+
+#header > .flex-row button > span {
+  margin: 0 0 0 -1px;
+  width: 16px;
+}
+
+.controlHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.controlHeader > span {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  margin: 0 .25em;
+}
+
+#headerButtons {
+  display: flex;
+}
+
+#cycleToggle {
+  margin: 0 1em 0 .25em !important;
+}
+
+#navButtons {
+  display: flex;
+  align-self: center;
+}
+
+#sizeControl {
+  flex: 1;
+  display: flex;
+}
+
+#sidebar {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.colThumbnail {
+  float: right;
+}
+
+.colName > br {
+  display: none;
+}
+
 
 input, textarea, select, button, .btn-primary {
   background-color: rgb(68,68,68);
   color: #dddddd;
+  font-family: monospace !important;
 }
 /* PP - make it easy to identify disabled buttons */
 
@@ -163,10 +229,15 @@ input[type=submit]:disabled,
   border-color: #666666;
 }
 
+#navbar-container {
+  background: linear-gradient(to bottom, purple, transparent);
+}
+
 .navbar {
   margin-bottom: 0 !important;
   border-radius: 0;
-  color: #03A9F4 !important;
+  /* color: #03A9F4 !important; */
+  background-color: unset !important;
 }
 
 .sidebar {
@@ -181,12 +252,16 @@ input[type=submit]:disabled,
 }
 
 .table-striped > tbody > tr:nth-of-type(2n+1) {
-  background-color: #333333;
+  background-color: #111;
 }
 
 .table-hover > tbody > tr:hover {
   color: orange;
-  background-color: #444444;
+  background-color: #222;
+}
+
+#pills-tab {
+  background-color: unset;
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
@@ -196,6 +271,23 @@ input[type=submit]:disabled,
 
 .nav>li>a:focus, .nav>li>a:hover {
   background-color: #444444;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: orange;
+}
+
+.text-success {
+  color: #0d0 !important;
+}
+
+.navbar-btn {
+  color: orange;
+  background-color: unset;
+}
+
+.navbar-btn:hover {
+  background-color: orange;
 }
 
 /* Override chosen for dark theme */
@@ -222,9 +314,9 @@ li.search-choice {
 }
 
 ul.nav.nav-pills.flex-column {
-    background-color:  #485460; 
+    background-color: #485460;
 }
 
 .thead-highlight {
-    background-color:#485460;
+    background-color: #222632;
 }
